@@ -7,7 +7,8 @@
     "client-install": "cd src/client && npm install",
     "server": "nodemon --exec babel-node src/server/server.js",
     "client": "npm start --prefix src/client",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "deploy": "gh-pages -d src/client/build"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/teddy4445/lecture_website_app_generator/issues"
   },
-  "homepage": "https://github.com/teddy4445/lecture_website_app_generator#readme",
+  "homepage": "https://arielfenster.github.io/lecture_website_app_generator/",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "axios": "^0.19.2",
@@ -45,6 +46,7 @@
     "@babel/core": "^7.11.1",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.11.0",
+    "gh-pages": "^3.1.0",
     "nodemon": "^2.0.4"
   }
 }
